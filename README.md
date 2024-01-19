@@ -1,4 +1,4 @@
-                                                  Hello World Greetings Service
+Hello World Greetings Service
 
 
 This project implements a simple greetings service using Python and Flask. The service responds with different salutations based on the customer's preference. The solution includes a Dockerfile for containerization and Kubernetes deployment scripts.
