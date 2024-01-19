@@ -59,7 +59,7 @@ After deployment, you can test the endpoints using tools like curl:
       curl http://localhost/greet?customer_name=C
 
 
-Cleanup
+Cleanup: 
 
 To clean up the deployed resources:
 
