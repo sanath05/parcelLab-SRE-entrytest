@@ -81,8 +81,11 @@ For Quality Considerations
 
 
 
+
+
 NOTE:
 . This setup assumes you have a local Docker registry running on localhost:5000. Adjust the registry location accordingly if needed.
+
 . Remember to make the scripts executable using chmod +x script.sh before running them.
 
 
