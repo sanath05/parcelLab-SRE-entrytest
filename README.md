@@ -59,7 +59,14 @@ After deployment, you can test the endpoints using tools like curl:
       curl http://localhost/greet?customer_name=C
 
 
+Cleanup
+To clean up the deployed resources:
 
+        kubectl delete deployment greetings-deployment
+        kubectl delete service greetings-service
+
+
+ 
 For Quality Considerations
 
 1. Unit Testing: Write unit tests for the service to ensure that each customer gets the expected greeting.
@@ -76,6 +83,7 @@ For Quality Considerations
 NOTE:
 . This setup assumes you have a local Docker registry running on localhost:5000. Adjust the registry location accordingly if needed.
 . Remember to make the scripts executable using chmod +x script.sh before running them.
+
 
 
 
