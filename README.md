@@ -13,8 +13,8 @@ Build and Run Locally
 
 
 2. Build and Run Locally:
-  # Build the Docker image 
-    ./build.sh 
+        # Build the Docker image 
+          ./build.sh 
   
 # Run the Docker container 
     docker run -p 5000:5000 greetings-service
