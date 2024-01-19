@@ -4,6 +4,11 @@
 This project implements a simple greetings service using Python and Flask. The service responds with different salutations based on the customer's preference. The solution includes a Dockerfile for containerization and Kubernetes deployment scripts.
 
 
+
+
+
+$
+
 1. Clone the Repository:
     '''git clone https://github.com/sanath05/parcelLab-SRE-entrytest.git'''
 
