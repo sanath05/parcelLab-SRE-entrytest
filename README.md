@@ -92,20 +92,25 @@ NOTE:
 
 
 ERRORS:
+
+
 Error: ErrImagePull
 Error: ImagePullBackOff
 
+
 While checking pod level logs I noticed above error that ErrImagePull and after describing the pod got to know below error:
+
 Failed to pull image "localhost:5000/greetings-service": Error response from daemon: Get "http://localhost:5000/v2/": dial tcp 127.0.0.1:5000: connect: connection refused
+
 
 Troubleshooting steps:
 
- While I am using minikube and want to pull down the image from 127.0.0.1:5000 then getting above error.
-
+While I am using minikube and want to pull down the image from 127.0.0.1:5000 then getting above error.
 So I have setup the registry inside the minikube instead of host side.
 i.e.
 
 host: registry (127.0.0.1:5000)
+
 minikube: no registry (the K8s could not find your image)
 
 
