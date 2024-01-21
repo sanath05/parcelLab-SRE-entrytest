@@ -12,11 +12,11 @@ def greet_customer():
     customer_name = request.args.get('customer_name', '')
     
     # Check the value of 'customer_name' and set the appropriate greeting
-    if customer_name.lower() == 'customer-A':
+    if customer_name.lower() == 'customera':
         greeting = 'Hi'
-    elif customer_name.lower() == 'customer-B':
+    elif customer_name.lower() == 'customerb':
         greeting = 'Dear Sir or Madam'
-    elif customer_name.lower() == 'customer-C':
+    elif customer_name.lower() == 'customerc':
         greeting = 'Moin'
     else:
         greeting = 'Hello'
@@ -25,5 +25,5 @@ def greet_customer():
     return jsonify({'greeting': greeting})
 
 # Run the application if the script is executed directly
-#if __name__ == '__main__':
- #   app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
