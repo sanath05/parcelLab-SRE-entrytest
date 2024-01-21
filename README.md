@@ -48,15 +48,15 @@ Testing Endpoints
 After deployment, you can test the endpoints using tools like curl:
   
     For customer A:
-      curl http://localhost/greet?customer_name=A
+      curl http://localhost/greet?customer_namea
 
 
     For customer B:
-      curl http://localhost/greet?customer_name=B
+      curl http://localhost/greet?customer_nameb
 
 
     For customer C:
-      curl http://localhost/greet?customer_name=C
+      curl http://localhost/greet?customer_namec
 
 
 Cleanup: 
