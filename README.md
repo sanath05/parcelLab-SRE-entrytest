@@ -91,4 +91,44 @@ NOTE:
 
 
 
+ERRORS:
 
+While checking pod level logs I noticed above error that errimgpull and after describing the pod got to know below error:
+Failed to pull image "localhost:5000/greetings-service": Error response from daemon: Get "http://localhost:5000/v2/": dial tcp 127.0.0.1:5000: connect: connection refused
+
+Troubleshooting steps:
+
+ While I am using minikube and want to pull down the image from 127.0.0.1:5000 then getting above error.
+
+So I have setup the registry inside the minikube instead of host side.
+i.e.
+
+host: registry (127.0.0.1:5000)
+minikube: no registry (the K8s could not find your image)
+
+
+How to check ?
+Check minikube container.
+
+    docker ps -a
+Then login into minikube
+
+    minikube ssh
+enter: curl 127.0.0.1:5000
+you will get Failed to connect to 127.0.0.1 port 5000: Connection refused.
+
+Now to setup the registry type below command in minikube:
+
+    docker run --restart=always -d -p 5000:5000 --name registry registry:2
+
+Now you can test the registry with following commands:
+
+    curl 127.0.0.1:5000
+    curl 127.0.0.1:5000/v2
+    curl 127.0.0.1:5000/v2/_catalog
+    
+    {"repositories":[]}
+    # it's successful
+
+
+Now again start running from ./build.sh. You will able to pull the image without any errors. 
