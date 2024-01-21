@@ -94,7 +94,7 @@ NOTE:
 ERRORS:
 
 
-Error: ErrImagePull
+Error: ErrImagePull &
 Error: ImagePullBackOff
 
 
