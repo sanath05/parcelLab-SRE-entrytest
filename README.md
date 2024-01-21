@@ -92,8 +92,10 @@ NOTE:
 
 
 ERRORS:
+Error: ErrImagePull
+Error: ImagePullBackOff
 
-While checking pod level logs I noticed above error that errimgpull and after describing the pod got to know below error:
+While checking pod level logs I noticed above error that ErrImagePull and after describing the pod got to know below error:
 Failed to pull image "localhost:5000/greetings-service": Error response from daemon: Get "http://localhost:5000/v2/": dial tcp 127.0.0.1:5000: connect: connection refused
 
 Troubleshooting steps:
