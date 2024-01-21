@@ -126,7 +126,7 @@ Then login into minikube
 enter: curl 127.0.0.1:5000
 you will get Failed to connect to 127.0.0.1 port 5000: Connection refused.
 
-Now to setup the registry type below command in minikube:
+Ensure that your local Docker registry is up and running. You can start it using the
 
     docker run --restart=always -d -p 5000:5000 --name registry registry:2
 
@@ -141,3 +141,15 @@ Now you can test the registry with following commands:
 
 
 Now again start running from ./build.sh. You will able to pull the image without any errors. 
+
+
+
+
+Most importantly: 
+
+Confirm that the local registry address is reachable from within your Kubernetes cluster. Kubernetes uses the Docker daemon of the host, so it should be able to access the registry using the host machine's IP address.
+For example:
+I am using macos terminal and testing above approach locally, type below command to get know your local address:
+
+    ifconfig | grep inet
+    # Replace localhost in your deployment.yaml with the host machine's IP address.
